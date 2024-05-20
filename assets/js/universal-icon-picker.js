@@ -104,7 +104,12 @@ const i18nMessages = {
      * @constructor
      */
     function UniversalIconPicker(selector, options) {
-        this.selector = selector;
+        this.selector = document.querySelector(selector);
+
+        if (!this.selector) {
+            console.error('Universal icon picker - selector not found');
+            return;
+        }
 
         let defaults = {
             allowEmpty: true,
@@ -127,7 +132,7 @@ const i18nMessages = {
         this.iconLibrariesLoaded = false;
         this.iconMarkup = '';
         this.iconWrap = '';
-        this.idSuffix = '-' + this.selector.replace(/[#\s[\]="]/g, '');
+        this.idSuffix = '-' + this.selector?.id.replace(/[#\s[\]="]/g, '');
         this.sideBarBtn = '';
         this.sideBarList = [];
 
@@ -148,7 +153,7 @@ const i18nMessages = {
         if (this.options.mode === 'autoload') {
             this.init();
         } else {
-            document.querySelector(this.selector).addEventListener('click', this.init.bind(this), { once: true });
+            this.selector.addEventListener('click', this.init.bind(this), { once: true });
         }
     }
 
@@ -166,7 +171,7 @@ const i18nMessages = {
                     this.open();
                 });
             }
-            document.querySelector(this.selector).addEventListener('click', () => {
+            this.selector.addEventListener('click', () => {
                 this._onBeforeOpen().then(() => {
                     this.open();
                 });

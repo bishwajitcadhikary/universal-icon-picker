@@ -1,5 +1,5 @@
 {
-  "name": "@migliori/universal-icon-picker",
+  "name": "@bishwajitcadhikary/universal-icon-picker",
   "version": "1.1.6",
   "description": "Vanilla JS Icon Picker for any Icon Library",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/migliori/universal-icon-picker.git"
+    "url": "git+https://github.com/bishwajitcadhikary/universal-icon-picker.git"
   },
   "keywords": [
     "icon",
@@ -19,10 +19,10 @@
     "material",
     "icon picker"
   ],
-  "author": "Gilles Migliori",
+  "author": "Bishwajit Adhikary",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/migliori/universal-icon-picker/issues"
+    "url": "https://github.com/bishwajitcadhikary/universal-icon-picker/issues"
   },
-  "homepage": "https://universal-icon-picker.miglisoft.com"
+  "homepage": "https://universal-icon-picker.bishwajitcadhikary.com"
 }
